@@ -8,21 +8,35 @@ $(document).ready(function() {
     // La faccio diventare attuale con moment
     var momentIniziale = moment(dataIniziale);
     // Richiamo le funzioni
+    console.log(momentIniziale.month());
     stampaGiorni(momentIniziale);
     stampaFeste(momentIniziale);
 
     $('#next').click(function() {
-        // Aggiungo un mese alla data da visualizzare
-        momentIniziale.add(1, 'Months');
-        stampaGiorni(momentIniziale);
-        stampaFeste(momentIniziale);
+        if (momentIniziale.month() == 11) {
+            $('#next').hide();
+        } else {
+            // Aggiungo un mese alla data da visualizzare
+            $('#prev').show();
+            momentIniziale.add(1, 'Months');
+            stampaGiorni(momentIniziale);
+            stampaFeste(momentIniziale);
+        }
+        console.log(momentIniziale.month());
+        // se il mese attuale è 11 metto un alert
     });
 
     $('#prev').click(function() {
-        // Aggiungo un mese alla data da visualizzare
-        momentIniziale.subtract(1, 'Months');
-        stampaGiorni(momentIniziale);
-        stampaFeste(momentIniziale);
+        if (momentIniziale.month() == 0) {
+            $('#prev').hide();
+        } else {
+            $('#next').show();
+            // Aggiungo un mese alla data da visualizzare
+            momentIniziale.subtract(1, 'Months');
+            stampaGiorni(momentIniziale);
+            stampaFeste(momentIniziale);
+        }
+        // se il mese attuale è 0 metto un alert
     });
 
     // Creo una funzione che mi stampa tutti i giorni
