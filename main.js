@@ -57,10 +57,14 @@ $(document).ready(function() {
                 'month': mese.month()
             },
             'success': function(data) {
+                // .response mi da i dati di cui ho bisogno sotto forma di array
                 var festività = data.response;
+                // li giro con il ciclo for
                 for (var i = 0; i < festività.length; i++) {
+                    // prendo la data e il nome della festività
                     var dataFesta = festività[i].date;
                     var nomeFesta = festività[i].name;
+                    // vado a leggere quella con il data-giorno uguale alla data dela festività per differenzarla
                     $('.container-days div[data-giorno="' + dataFesta + '"]').addClass('festa').append('<span>' + nomeFesta + '</span>');
                 }
             },
@@ -70,7 +74,7 @@ $(document).ready(function() {
         });
     };
 
-
+    // Funzione per far si che la data venga sempre con due numeri nel data-giorni
     function giornoDueCifre(giorno) {
         if (giorno < 10) {
             return '0' + giorno;

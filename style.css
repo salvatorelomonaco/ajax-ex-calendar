@@ -6,17 +6,6 @@ header {
     display: flex;
 }
 
-#prev, #next {
-    align-self: center;
-    font-size: 40px;
-    color: #cfcfcf;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-#prev:hover, #next:hover {
-    color: black;
-}
 
 h1 {
     font-size: 100px;
@@ -27,6 +16,21 @@ h1 {
 strong {
     font-weight: 600;
     font-size: 40px;
+    align-self: flex-end;
+    margin-bottom: 16px;
+    margin-left: 20px;
+}
+
+#prev, #next {
+    align-self: center;
+    font-size: 40px;
+    color: #ccc;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#prev:hover, #next:hover {
+    color: black;
 }
 
 main {
@@ -41,7 +45,7 @@ main .container-days-of-week {
 }
 
 main .container-days-of-week span {
-    border: 1px solid #cfcfcf;
+    border: 1px solid #ccc;
     border-left: 0;
     width: 170px;
     height: 30px;
@@ -51,7 +55,7 @@ main .container-days-of-week span {
 }
 
 main .container-days-of-week span:first-child {
-    border-left: 1px solid #cfcfcf;
+    border-left: 1px solid #ccc;
 }
 
 main .container-days {
@@ -63,8 +67,8 @@ main .container-days {
 main .container-days .day {
     width: 170px;
     height: 90px;
-    border-right: 1px solid #cfcfcf;
-    border-bottom: 1px solid #cfcfcf;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     padding: 10px;
     font-weight: 600;
 }
@@ -83,5 +87,5 @@ main .container-days .day.festa span {
 }
 
 main .container-days .day:first-child, .day:nth-child(8), .day:nth-child(15), .day:nth-child(22), .day:nth-child(29) {
-    border-left: 1px solid #cfcfcf;
+    border-left: 1px solid #ccc;
 }
