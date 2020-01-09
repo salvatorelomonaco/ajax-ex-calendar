@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
+
+header {
+    width: 100%;
+    padding: 0 0 20px 30px;
+    display: flex;
+}
+
+#prev, #next {
+    align-self: center;
+    font-size: 40px;
+    color: #cfcfcf;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#prev:hover, #next:hover {
+    color: black;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 100;
+    margin: 0 30px;
+}
+
+strong {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+main {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+main .container-days-of-week {
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+
+main .container-days-of-week span {
+    border: 1px solid #cfcfcf;
+    border-left: 0;
+    width: 170px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+main .container-days-of-week span:first-child {
+    border-left: 1px solid #cfcfcf;
+}
+
+main .container-days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .container-days .day {
+    width: 170px;
+    height: 90px;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 10px;
+    font-weight: 600;
+}
+
+main .container-days .day.festa {
+    background-color: rgba(255, 87, 87,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .container-days .day.festa span {
+    align-self: flex-end;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+main .container-days .day:first-child, .day:nth-child(8), .day:nth-child(15), .day:nth-child(22), .day:nth-child(29) {
+    border-left: 1px solid #cfcfcf;
+}
