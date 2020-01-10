@@ -8,7 +8,7 @@ $(document).ready(function() {
     // La faccio diventare attuale con moment
     var momentIniziale = moment(dataIniziale);
     // Richiamo le funzioni
-    $('#prev').hide();
+    $('#prev').addClass('hidden');
     stampaGiorni(momentIniziale);
     stampaFeste(momentIniziale);
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
             $('#next').hide();
         } else {
             // Aggiungo un mese alla data da visualizzare
-            $('#prev').show();
+            $('#prev').removeClass('hidden');
         }
     });
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
         stampaGiorni(momentIniziale);
         stampaFeste(momentIniziale);
         if (momentIniziale.month() == 0) {
-            $('#prev').hide();
+            $('#prev').addClass('hidden');
         } else {
             $('#next').show();
         }
