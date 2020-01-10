@@ -41,7 +41,7 @@ $(document).ready(function() {
         $('.container-days').empty();
         var primoGiorno = mese.isoWeekday();
         for (var i = 1; i < primoGiorno; i++) {
-            $('.container-days').append('<div class="day" ></div>');
+            $('.container-days').append('<div class="day empty" ></div>');
         }
         // Controllo quanti giorni ci sono nel mese
         var giorniMese = mese.daysInMonth();
